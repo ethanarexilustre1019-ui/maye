@@ -1,0 +1,75 @@
+/* =========================================================
+   Custom Stylesheet - Lakbay Pilipinas Travel Webpage
+   Bootstrap 5 Pair Activity (Activity 6)
+   Creators: Merielle Cabiles & Ruth Ann Cataluña
+   ========================================================= */
+
+body {
+    background-color: #f4f7fb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #212529;
+}
+
+/* Top Navbar */
+.site-navbar {
+    background-color: #123c5d;
+}
+
+/* 1. Page Header Banner */
+.page-hero {
+    background: linear-gradient(135deg, #174b72 0%, #2574a9 100%);
+    color: #ffffff;
+    border-radius: 0.85rem;
+}
+
+/* Section Accent Bar (inspired by Activity 6 guide) */
+.section-box {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    border-top: 4px solid #2574a9;
+}
+
+/* 2. Cards Styling */
+.tour-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.tour-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.75rem 1.5rem rgba(23, 75, 114, 0.15) !important;
+}
+
+.tour-card .card-img-top {
+    height: 210px;
+    object-fit: cover;
+}
+
+/* Gallery Thumbnails (from Week 13-14 Images reference) */
+.gallery-thumb {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Creators Avatar Circle */
+.creator-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #174b72;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #123c5d;
+    color: #e9ecef;
+}

@@ -1,0 +1,10 @@
+{
+  "name": "lakbay-pilipinas-activity6",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Activity 6: Responsive Webpage using HTML, CSS, and Bootstrap 5 (Merielle Cabiles & Ruth Ann Cataluña)",
+  "scripts": {
+    "dev": "node -e \"const http=require('http'),fs=require('fs'),path=require('path');const port=3000;http.createServer((req,res)=>{const reqPath=req.url.split('?')[0];const file=path.join(__dirname,reqPath==='/'?'index.html':reqPath);fs.readFile(file,(err,data)=>{if(err){res.writeHead(404);return res.end('Not found');}const ext=path.extname(file);const mime={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript'}[ext]||'application/octet-stream';res.writeHead(200,{'Content-Type':mime});res.end(data);});}).listen(port,()=>{console.log('\\n  Local Dev Server running at: http://localhost:'+port+'\\n');});\"",
+    "start": "npm run dev"
+  }
+}

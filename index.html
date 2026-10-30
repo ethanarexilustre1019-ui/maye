@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- =========================================================
+         Activity 6: Bootstrap Components (Pair Activity)
+         Members / Creators:
+           - Merielle Cabiles
+           - Ruth Ann Cataluña
+         ========================================================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakbay Pilipinas | Travel &amp; Tour Booking</title>
+
+    <!-- Bootstrap 5 CDN (CSS) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Responsive Navbar (Reference: Week 13-14 Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-dark site-navbar shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">Lakbay Pilipinas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#packages">Tour Cards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Inclusions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#booking">Booking Status</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#creators">Creators</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="container my-4 my-md-5" id="home">
+
+        <!-- Breadcrumb Navigation (Reference: Week 13-14 Breadcrumbs) -->
+        <nav aria-label="breadcrumb" class="mb-3">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="#home" class="text-decoration-none">Home</a></li>
+                <li class="breadcrumb-item"><a href="#packages" class="text-decoration-none">Destinations</a></li>
+                <li class="breadcrumb-item active" aria-current="page">2026 Holiday Packages</li>
+            </ol>
+        </nav>
+
+        <!-- =====================================================
+             1. PAGE HEADER AND ALERT
+             ===================================================== -->
+        <section class="mb-5">
+            <!-- Page Header -->
+            <header class="page-hero p-4 p-md-5 mb-3 text-center shadow-sm">
+                <span class="badge text-bg-light text-primary mb-2 px-3 py-2">2026 Travel Showcase</span>
+                <h1 class="display-5 fw-bold mb-2">Lakbay Pilipinas Travel &amp; Tours</h1>
+                <p class="lead mb-0">
+                    Discover scenic beaches, cool mountain highlands, and vibrant heritage cities across the Philippines.
+                </p>
+            </header>
+
+            <!-- Bootstrap Alert below the title -->
+            <div class="alert alert-warning alert-dismissible fade show shadow-sm mb-0" role="alert">
+                <strong>Important Booking Notice:</strong> Early-bird reservations are now open! Book any tour package before <strong>November 15, 2026</strong> to enjoy <strong>20% OFF</strong> and free airport transfers.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             2. BOOTSTRAP CARDS (3 Cards in a Responsive Row)
+             Each card has: Image, Title, Badge, and Button
+             ===================================================== -->
+        <section id="packages" class="section-box p-4 shadow-sm mb-5">
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+                <div>
+                    <h2 class="h3 fw-bold mb-1">Featured Destination Packages</h2>
+                    <p class="text-muted mb-0">Choose from our top three curated local getaways.</p>
+                </div>
+                <span class="badge text-bg-primary rounded-pill px-3 py-2 mt-2 mt-sm-0">3 Featured Tours</span>
+            </div>
+
+            <!-- Responsive Grid Row: 1 col on mobile, 2 on small/tablet, 3 on desktop -->
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100 border shadow-sm tour-card">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=900&amp;q=80" class="card-img-top" alt="Palawan Tropical Beach">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                                <h5 class="card-title fw-bold mb-0">Palawan Beach Escape</h5>
+                                <span class="badge text-bg-success">Best Seller</span>
+                            </div>
+                            <p class="card-text text-muted flex-grow-1">
+                                Relax by crystal-clear waters, go island hopping across hidden lagoons, and enjoy sunset beach dining.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                <span class="fw-bold text-primary">&#8369;8,999 <small class="text-muted fw-normal">/ pax</small></span>
+                                <a href="#booking" class="btn btn-primary btn-sm px-3">Book Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-light text-muted small">
+                            4 Days &bull; 3 Nights &bull; All-Inclusive
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100 border shadow-sm tour-card">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=900&amp;q=80" class="card-img-top" alt="Cordillera Mountain Peaks">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                                <h5 class="card-title fw-bold mb-0">Cordillera Highland Trek</h5>
+                                <span class="badge text-bg-danger">Limited Slots</span>
+                            </div>
+                            <p class="card-text text-muted flex-grow-1">
+                                Breathe in crisp pine-scented mountain air, watch sunrise sea-of-clouds views, and visit heritage terraces.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                <span class="fw-bold text-primary">&#8369;6,799 <small class="text-muted fw-normal">/ pax</small></span>
+                                <a href="#booking" class="btn btn-primary btn-sm px-3">Book Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-light text-muted small">
+                            4 Days &bull; 3 Nights &bull; Guided Hike
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100 border shadow-sm tour-card">
+                        <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&amp;fit=crop&amp;w=900&amp;q=80" class="card-img-top" alt="Bacolod City Night Skyline">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                                <h5 class="card-title fw-bold mb-0">Bacolod City Food &amp; Tour</h5>
+                                <span class="badge text-bg-warning">Popular Pick</span>
+                            </div>
+                            <p class="card-text text-muted flex-grow-1">
+                                Explore historic landmarks in the City of Smiles, taste authentic local delicacies, and tour ancestral sites.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                <span class="fw-bold text-primary">&#8369;5,499 <small class="text-muted fw-normal">/ pax</small></span>
+                                <a href="#booking" class="btn btn-primary btn-sm px-3">Book Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-light text-muted small">
+                            3 Days &bull; 2 Nights &bull; Heritage &amp; Food
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             3. LIST GROUP & 4. PROGRESS BAR (Responsive 2-Column Row)
+             ===================================================== -->
+        <div class="row g-4 mb-5">
+
+            <!-- 3. BOOTSTRAP LIST GROUP (5 Items: Services & Schedule) -->
+            <div class="col-12 col-lg-6" id="features">
+                <section class="section-box p-4 shadow-sm h-100">
+                    <h2 class="h4 fw-bold mb-2">Tour Services &amp; Daily Schedule</h2>
+                    <p class="text-muted mb-3">
+                        Every Lakbay Pilipinas package includes these essential travel features and schedules:
+                    </p>
+
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                            <div>
+                                <strong class="d-block">Hotel Accommodation &amp; Daily Breakfast</strong>
+                                <small class="text-muted">Comfortable 3-star to 4-star accredited partner hotels</small>
+                            </div>
+                            <span class="badge text-bg-primary rounded-pill">Included</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                            <div>
+                                <strong class="d-block">Roundtrip Airport &amp; Van Transfers</strong>
+                                <small class="text-muted">Air-conditioned tourist transport between all stops</small>
+                            </div>
+                            <span class="badge text-bg-primary rounded-pill">Included</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                            <div>
+                                <strong class="d-block">DOT-Accredited Local Tour Guide</strong>
+                                <small class="text-muted">Friendly guides sharing local history and hidden spots</small>
+                            </div>
+                            <span class="badge text-bg-success rounded-pill">Guided</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                            <div>
+                                <strong class="d-block">Morning Assembly &amp; Departure Schedule</strong>
+                                <small class="text-muted">7:30 AM Breakfast &bull; 8:30 AM Tour Departure &bull; 5:00 PM Return</small>
+                            </div>
+                            <span class="badge text-bg-info rounded-pill">Schedule</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                            <div>
+                                <strong class="d-block">Travel Insurance &amp; 24/7 Support</strong>
+                                <small class="text-muted">Full passenger coverage and flexible rebooking options</small>
+                            </div>
+                            <span class="badge text-bg-secondary rounded-pill">Protected</span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- 4. BOOTSTRAP PROGRESS BAR (Measurable Value + Percentage + Label) -->
+            <div class="col-12 col-lg-6" id="booking">
+                <section class="section-box p-4 shadow-sm h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <h2 class="h4 fw-bold mb-2">Holiday Season Booking Tracker</h2>
+                        <p class="text-muted mb-4">
+                            Live slot availability for our upcoming November&ndash;December 2026 travel batch:
+                        </p>
+
+                        <!-- Main Required Progress Bar -->
+                        <div class="p-3 bg-light rounded-3 border mb-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <label class="fw-bold text-dark mb-0">Overall Batch Capacity: Booking 75% Full</label>
+                                <span class="badge text-bg-primary">75%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Booking 75% Full" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 26px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary fw-semibold" style="width: 75%;">
+                                    Booking 75% Full
+                                </div>
+                            </div>
+                            <small class="text-muted d-block mt-2">
+                                45 out of 60 total traveler seats have been reserved. Only 15 seats left!
+                            </small>
+                        </div>
+
+                        <!-- Supporting Destination Progress Bars -->
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between small mb-1">
+                                <span>Palawan Beach Escape Quota</span>
+                                <span class="fw-semibold text-success">85% Reserved</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Palawan Beach Escape 85% Reserved" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="height: 12px;">
+                                <div class="progress-bar bg-success" style="width: 85%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between small mb-1">
+                                <span>Early-Bird Promo Vouchers Claimed</span>
+                                <span class="fw-semibold text-warning-emphasis">60% Claimed</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Promo Vouchers 60% Claimed" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="height: 12px;">
+                                <div class="progress-bar bg-warning" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 pt-3 border-top mt-3">
+                        <span class="small text-muted">Need group rates for 5+ travelers?</span>
+                        <a href="#packages" class="btn btn-outline-primary btn-sm">View Available Tours</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- =====================================================
+             EXTRA LESSON INTEGRATION: Tabs & Thumbnail Gallery
+             (Reference: Week 13-14 Images & Nav Tabs)
+             ===================================================== -->
+        <section class="section-box p-4 shadow-sm mb-5">
+            <h2 class="h4 fw-bold mb-3">Traveler Snapshots &amp; Tips</h2>
+
+            <ul class="nav nav-tabs mb-3" id="infoTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="gallery-tab" data-bs-toggle="tab" data-bs-target="#gallery-pane" type="button" role="tab" aria-controls="gallery-pane" aria-selected="true">
+                        Photo Thumbnails
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="reminders-tab" data-bs-toggle="tab" data-bs-target="#reminders-pane" type="button" role="tab" aria-controls="reminders-pane" aria-selected="false">
+                        Packing Reminders
+                    </button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="infoTabsContent">
+                <div class="tab-pane fade show active" id="gallery-pane" role="tabpanel" aria-labelledby="gallery-tab" tabindex="0">
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-4">
+                            <figure class="figure w-100 mb-0">
+                                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=900&amp;q=80" class="figure-img img-fluid img-thumbnail gallery-thumb mb-1" alt="Beach view">
+                                <figcaption class="figure-caption text-center">Island hopping in Palawan</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <figure class="figure w-100 mb-0">
+                                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=900&amp;q=80" class="figure-img img-fluid img-thumbnail gallery-thumb mb-1" alt="Mountain ridge">
+                                <figcaption class="figure-caption text-center">Morning fog in the Cordilleras</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <figure class="figure w-100 mb-0">
+                                <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&amp;fit=crop&amp;w=900&amp;q=80" class="figure-img img-fluid img-thumbnail gallery-thumb mb-1" alt="City lights">
+                                <figcaption class="figure-caption text-center">Evening stroll in Bacolod City</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="reminders-pane" role="tabpanel" aria-labelledby="reminders-tab" tabindex="0">
+                    <p class="mb-2">Before your scheduled trip, make sure to prepare:</p>
+                    <ul class="mb-0">
+                        <li>Valid government or student ID for hotel check-in and terminal boarding.</li>
+                        <li>Light, breathable clothes for beach tours or a warm jacket for highland trips.</li>
+                        <li>Reusable water bottle, sunscreen, and power bank for full-day excursions.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             PAIR ACTIVITY MEMBERS / CREATORS SECTION
+             ===================================================== -->
+        <section id="creators" class="section-box p-4 shadow-sm">
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                <div>
+                    <h2 class="h5 fw-bold mb-1">Project Creators &mdash; Pair Activity</h2>
+                    <p class="text-muted small mb-0">Activity 6: Bootstrap 5 Components Implementation</p>
+                </div>
+                <span class="badge text-bg-dark px-3 py-2 mt-2 mt-sm-0">Group / Pair Members</span>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-12 col-md-6">
+                    <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3 border">
+                        <div class="creator-avatar">MC</div>
+                        <div>
+                            <h3 class="h6 fw-bold mb-0">Merielle Cabiles</h3>
+                            <small class="text-muted">Member / Co-Creator &bull; Layout &amp; Bootstrap Components</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3 border">
+                        <div class="creator-avatar">RC</div>
+                        <div>
+                            <h3 class="h6 fw-bold mb-0">Ruth Ann Catalu&ntilde;a</h3>
+                            <small class="text-muted">Member / Co-Creator &bull; Styling &amp; Responsive Design</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer py-4 mt-5">
+        <div class="container text-center">
+            <p class="fw-bold mb-1">Lakbay Pilipinas Travel &amp; Tours</p>
+            <p class="small mb-1">
+                Created by <strong>Merielle Cabiles</strong> &amp; <strong>Ruth Ann Catalu&ntilde;a</strong>
+            </p>
+            <small class="text-white-50">Activity 6: Responsive Webpage using HTML, CSS &amp; Bootstrap 5</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 CDN (JS Bundle) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
